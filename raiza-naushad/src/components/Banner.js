@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react'
 import { Container, Row, Col } from "react-bootstrap"
 import {ArrowRightCircle} from "react-bootstrap-icons"
-import headerImg from "../assets/images/2.jpg"
+import headerImg from "../assets/images/banner.jpg"
 
 
 export const Banner = () => {
