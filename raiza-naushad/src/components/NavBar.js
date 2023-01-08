@@ -2,6 +2,8 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import { Navbar,Container,Nav } from 'react-bootstrap'
 import logo from '../assets/logo.png'
+import iconLinkedin from '../assets/images/icon-linked.png'
+import iconGit from '../assets/images/icon-github.png'
 
 export const NavBar = () => {
   const [activeLink,setActiveLink] = useState('home');
@@ -39,11 +41,11 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#"><img src={''} alt=""/></a>
-              <a href="#"><img src={''} alt=""/></a>
+              <a href="https://www.linkedin.com/in/raiza-naushad"><img src={iconLinkedin} target="_blank" alt="linkedin"/></a>
+              <a href="https://github.com/raiza27"><img src={iconGit} target="_blank" alt="git"/></a>
             </div>
            
-                <button className="vvd"><span>Connect</span></button>
+                <button className="vvd"><span>Contact</span></button>
             
           </span>
         </Navbar.Collapse>

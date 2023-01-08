@@ -54,7 +54,7 @@ useEffect(() => {
                     <span className="tagline">Warm welcome to my portfolio</span>
                     <h1>{'I am Raiza Naushad'}</h1>
                     <h2><span className="wrap">'{text}'</span></h2>
-                    <p>Trying to be best of both worlds! </p>
+                    <p>Trying to be best in both worlds! </p>
                     <button onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle size={25}/></button>
                 </Col>
                 <Col  xs={12} md={6} xl={5}>
