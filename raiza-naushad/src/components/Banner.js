@@ -2,6 +2,8 @@ import { useState,useEffect } from 'react'
 import { Container, Row, Col } from "react-bootstrap"
 import {ArrowRightCircle} from "react-bootstrap-icons"
 import headerImg from "../assets/images/banner.jpg"
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 
 export const Banner = () => {
@@ -20,6 +22,7 @@ useEffect(() => {
 
     return () => { clearInterval(ticker) };
   }, [text])
+  
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -51,18 +54,27 @@ useEffect(() => {
         <Container>
             <Row className="align-items-center">
                 <Col xs={12} md={6} xl={7}>
+                <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>  
                     <span className="tagline">Warm welcome to my portfolio</span>
                     <h1>{'I am Raiza Naushad'}</h1>
                     <h2><span className="wrap">'{text}'</span></h2>
                     <p>Trying to be best in both worlds! </p>
-                    <button onClick={() => console.log('connect')}>Let's Connect<ArrowRightCircle size={25}/></button>
-                </Col>
-                <Col  xs={12} md={6} xl={5}>
-                 <img src={headerImg} alt="Banner Image"/>
-                </Col>
-            </Row>
-        </Container>
-      </section>  
-    )
-
+                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                    </div>}
+            </TrackVisibility>
+            </Col>
+          <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  )
 }
