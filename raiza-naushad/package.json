@@ -1,7 +1,7 @@
 {
   "name": "raiza-naushad",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/portfolio/raiza-naushad",
+  "homepage": "https://gitname.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
