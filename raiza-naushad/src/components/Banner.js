@@ -60,7 +60,7 @@ useEffect(() => {
                     <span className="tagline">Warm welcome to my portfolio</span>
                     <h1>{'I am Raiza Naushad'}</h1>
                     <h2><span className="wrap">'{text}'</span></h2>
-                    <p>Trying to be best in both worlds! </p>
+                    <p>Learning never ends! </p>
                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                     </div>}
             </TrackVisibility>
