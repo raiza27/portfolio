@@ -1,8 +1,10 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import projImg1 from "../assets/images/project1.png";
 import projImg2 from "../assets/images/project2.png";
+import projImg3 from "../assets/images/data.mp4";
 import colorSharp2 from "../assets/images/color-sharp2.png";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectVideoCard } from "./ProjectVideoCard";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -19,6 +21,14 @@ export const Projects = () => {
           imgUrl: projImg2,
         },
       ];
+      const dataProjects = [
+        {
+          title: "The Weather Network - Web Traffic Analysis",
+          description: "The data and dashboard images are sourced from Similarweb, where public network traffic data is available. ",
+          subject:" This sample case study and insights are for a campaign to generate increased ad revenue for the specified website.",
+          videoUrl: projImg3,
+        },
+        ];
       return (
         <section className="project" id="projects">
           <Container>
@@ -28,7 +38,7 @@ export const Projects = () => {
                   {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                     <h2>Projects</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>In times of change, learners inherit the earth; while the learned find themselves beautifully equipped to deal with a world that no longer exists - Eric Hoffer</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                       <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                         <Nav.Item>
@@ -60,10 +70,21 @@ export const Projects = () => {
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                          <p>Are You Ready For This? Coming soon!</p>
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                          <Row>
+                            {
+                              dataProjects.map((project, index) => {
+                                return (
+                                  <ProjectVideoCard
+                                    key={index}
+                                    {...project}
+                                    />
+                                )
+                              })
+                            }
+                          </Row>
                         </Tab.Pane>
                       </Tab.Content>
                     </Tab.Container>

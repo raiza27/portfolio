@@ -7,6 +7,7 @@ import skill3 from "../assets/images/skill3-css.png"
 import skill4 from "../assets/images/skill4-js.png"
 import skill5 from "../assets/images/skill5-react.png"
 import skill6 from "../assets/images/skill6-db.png"
+import skill7 from "../assets/images/skill7-data.png"
 
 
 export const Skills = () => {
@@ -40,6 +41,10 @@ export const Skills = () => {
                         <div className="item">
                          <img src={skill1} alt="sql"/>
                          <h5>SQL</h5>
+                        </div>
+                        <div className="item">
+                         <img src={skill7} alt="data"/>
+                         <h5>Data</h5>
                         </div>
                         <div className="item">
                          <img src={skill2} alt="html"/>
